@@ -1,0 +1,15 @@
+{% extends "layout" %}
+
+{% block content %}
+    <div class="col-lg-8 offset-lg-2 text-center">
+        <h1>Spring Boot with Pebble and Laravel Mix</h1>
+        <p class="lead">
+            This is a demo project demonstrating the integration of
+            <a href="https://spring.io/projects/spring-boot">Spring Boot</a> with the
+            <a href="http://mitchellbosecke.com/pebble/home">Pebble Template Engine</a> and
+            <a href="https://github.com/JeffreyWay/laravel-mix">Laravel Mix</a> for asset processing.
+            As a bonus, <a href="https://getbootstrap.com">Bootstrap 4</a> is integrated via <a href="https://www.npmjs.com/">NPM</a>
+            which can be fully customized with <a href="https://sass-lang.com/">Sass</a>.
+        </p>
+    </div>
+{% endblock %}

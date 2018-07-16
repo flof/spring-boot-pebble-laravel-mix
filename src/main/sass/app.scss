@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// custom variables
+@import "variables";
+
+// load bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  padding-top: 5rem;
+}
