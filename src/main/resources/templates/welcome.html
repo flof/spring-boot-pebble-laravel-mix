@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh">
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -13,7 +13,6 @@
         html, body {
             background-color: #fff;
             color: #636b6f;
-            font-family: 'Nunito', sans-serif;
             font-weight: 200;
             height: 100vh;
             margin: 0;
@@ -72,9 +71,7 @@
     </div>
 
     <div class="content">
-        <div class="title m-b-md">
-            Spring Boot and Laravel Mix
-        </div>
+        <div class="title m-b-md" th:text="${greeting}"></div>
 
         <div class="links">
             <a href="https://laravel.com/docs">Docs</a>
