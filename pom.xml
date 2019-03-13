@@ -51,10 +51,9 @@
             <scope>runtime</scope>
         </dependency>   <!-- spring-boot-devtools -->
         <dependency>
-            <groupId>io.pebbletemplates</groupId>
-            <artifactId>pebble-spring-boot-2-starter</artifactId>
-            <version>3.0.0</version>
-        </dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>   <!-- spring-boot-starter-thymeleaf -->
 
         <dependency>
             <groupId>org.projectlombok</groupId>

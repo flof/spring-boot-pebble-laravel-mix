@@ -6,7 +6,7 @@
     "spring",
     "boot"
   ],
-  "author": "Kuzon Chen, Florian Fankhauser",
+  "author": "Florian Fankhauser, Kuzon Chen",
   "license": "ISC",
   "scripts": {
     "dev": "npm run development",

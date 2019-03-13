@@ -10,5 +10,5 @@ Based on Laravel 5.8
 1. `npm install` 
 2. `npm run watch`
 3. Open the maven project with your favorite Java IDE
-4. Run class **DemoApplication**
+4. Run class **MixApplication**
 5. Open http://127.0.0.1:5273 in your browser
