@@ -1,4 +1,4 @@
-package at.lingu.laravelmix.web;
+package com.kuzoncby.mix.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

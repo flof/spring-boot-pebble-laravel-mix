@@ -1,4 +1,4 @@
-package at.lingu.laravelmix;
+package com.kuzoncby.mix;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
