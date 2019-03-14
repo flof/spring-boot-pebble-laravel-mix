@@ -9,11 +9,11 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
-@Api(tags = "Person Entity")
+@Api(tags = "人员仓库", description = "人员实体")
 @RepositoryRestResource(collectionResourceRel = "people", path = "people")
 public interface PersonRepository extends PagingAndSortingRepository<Person, Long> {
 
-    @ApiOperation("Find all people by name")
+    @ApiOperation(notes = "通过名称找人", value = "通过名称找人")
     List<Person> findByName(@Param("name") String name);
 
 }
