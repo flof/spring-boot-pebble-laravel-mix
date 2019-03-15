@@ -1,4 +1,4 @@
-Spring Boot with Pebble and Laravel Mix
+Spring Boot and Laravel Mix
 =======================================
 
 [中文文档 README-zh.md](README-zh.md)
@@ -7,10 +7,36 @@ This is a demo project demonstrating the integration of [Spring Boot](https://sp
 
 Based on Laravel 5.8
 
+## Getting Started
+
+This project contains the following content:
+
+- Spring Boot
+    - Spring Data
+    - Spring Data REST
+    - H2
+    - Swagger
+    - SpringFox
+- Larvel Mix
+    - Bootstrap
+    - Vue    
+
 ## Install
 
-1. `npm install` 
-2. `npm run watch`
-3. Open the maven project with your favorite Java IDE
-4. Run class **MixApplication**
-5. Open http://127.0.0.1:5273 in your browser
+1. Open the maven project with your favorite Java IDE.
+
+2. Install NPM packages:
+
+```powershell
+npm install
+npm run dev
+
+```
+
+3. Run class **MixApplication**
+
+4. Open http://127.0.0.1:5273 in your browser
+
+## License
+
+ISC

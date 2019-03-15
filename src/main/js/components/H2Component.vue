@@ -4,19 +4,20 @@
             <div class="container">
                 <div class="row">
                     <div class="mx-auto col-lg-8">
-                        <h1>说明</h1>
+                        <h1>Usage</h1>
                         <p class="mb-4">
-                            这是一个Larvel Mix与Spring Data Rest Repository的样例。在下列表单中输入用户名和显示名称，数据将被添加到H2数据库中。
+                            This is an example of a Larvel Mix and Spring Data Rest Repository. Enter the username and
+                            display name in the form below and the data will be added to the H2 database.
                         </p>
                         <form class="form-inline d-flex justify-content-around">
                             <div class="form-group">
-                                <input class="form-control" id="name" placeholder="用户名称"
+                                <input class="form-control" id="name" placeholder="Username"
                                        type="text" v-model="formUser.name"></div>
                             <div class="form-group">
-                                <input class="form-control" id="display-name" placeholder="显示名称"
+                                <input class="form-control" id="display-name" placeholder="Display Name"
                                        type="text" v-model="formUser.displayName"
                                 ></div>
-                            <button @click="saveUser()" class="btn btn-primary" type="button">添加用户</button>
+                            <button @click="saveUser()" class="btn btn-primary" type="button">Add User</button>
                         </form>
                     </div>
                 </div>
@@ -27,26 +28,27 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header">数据库</div>
+                            <div class="card-header">Users</div>
                             <div class="card-body">
-                                <h4>存储在H2数据库的人</h4>
-                                <p>没有用户</p>
-                                <div class="table-responsive">
+                                <h4>People store in H2 database.</h4>
+                                <p v-if="users.length === 0">No users</p>
+                                <div class="table-responsive" v-if="users.length !== 0">
                                     <table class="table table-bordered ">
                                         <thead class="thead-dark">
                                         <tr>
-                                            <th>ID</th>
-                                            <th>名称</th>
-                                            <th>显示名称</th>
-                                            <th>操作</th>
+                                            <th>Name</th>
+                                            <th>Display Name</th>
+                                            <!--<th>Operate</th>-->
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <th>1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>删除</td>
+                                        <tr v-for="user in users">
+                                            <td v-text="user.name">Mark</td>
+                                            <td v-text="user.displayName">Otto</td>
+                                            <!--<td>-->
+                                            <!--<button class="btn btn-link" @click="deleteUser(user.name)">Delete-->
+                                            <!--</button>-->
+                                            <!--</td>-->
                                         </tr>
                                         </tbody>
                                     </table>
@@ -64,7 +66,7 @@
     export default {
         mounted() {
             console.log('Component Mounted');
-            // this.read();
+            this.getUsers();
         },
         data: function () {
             return {
@@ -73,23 +75,25 @@
                     name: '',
                     displayName: ''
                 },
-                users: {}
+                users: []
             }
         },
         methods: {
             saveUser() {
-                console.debug(this.formUser);
                 window.axios.post('/api/v1/people', this.formUser).then((response) => {
-                    console.debug(response.data);
-                    const {content} = response.data;
-                    console.debug(content);
-                    this.msg = "更新成功！";
+                    this.msg = "Update Successful";
+                    this.getUsers();
                 });
             },
             getUsers() {
                 window.axios.get('/api/v1/people').then((response) => {
-                    const {content} = response.data;
-                    this.users = content;
+                    this.users = response.data._embedded.people;
+                    console.log(this.users);
+                });
+            },
+            deleteUser(id) {
+                window.axios.delete('/api/v1/people/' + id).then((response) => {
+                    this.getUsers();
                 });
             }
         }

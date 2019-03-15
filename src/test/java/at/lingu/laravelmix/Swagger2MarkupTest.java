@@ -1,4 +1,4 @@
-package com.kuzoncby.mix;
+package at.lingu.laravelmix;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

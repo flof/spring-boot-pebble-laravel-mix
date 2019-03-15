@@ -15,18 +15,18 @@
             <button class="navbar-toggler navbar-toggler-right border-0 p-0" data-target="#navbar14"
                     data-toggle="collapse"
                     type="button">
-                <p class="navbar-brand mb-0 text-white" th:text="${greeting}">
+                <p class="navbar-brand mb-0 text-white" th:text="${appName}">
                     <i class="fa d-inline fa-lg fa-stop-circle"></i></p>
             </button>
             <div class="collapse navbar-collapse" id="navbar14">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">主页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/h2-console" target="_blank">H2 Console</a></li>
                 </ul>
-                <p class="d-none d-md-block lead mb-0  text-white" th:text="${greeting}"><i
+                <p class="d-none d-md-block lead mb-0  text-white" th:text="${appName}"><i
                         class="fa d-inline fa-lg fa-stop-circle"></i> <b>
                 </b></p>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="/swagger-ui.html">访问 Swagger 调试工具</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/swagger-ui.html" target="_blank">Swagger</a></li>
                 </ul>
             </div>
         </div>
@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p class="mb-0">© 2019 Kuzon Chen. All rights reserved</p>
+                    <p class="mb-0">License under ISC</p>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-package com.kuzoncby.mix;
+package at.lingu.laravelmix;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,7 +29,7 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Spring Boot and Laravel Mix")
-                .description("Spring Boot 与 Laravel Mix 测试项目")
+                .description("Spring Boot and Laravel Mix example")
                 .version("1.0.0")
                 .build();
     }

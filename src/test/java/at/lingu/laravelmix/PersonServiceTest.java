@@ -1,7 +1,7 @@
-package com.kuzoncby.mix;
+package at.lingu.laravelmix;
 
+import at.lingu.laravelmix.model.Person;
 import com.google.gson.Gson;
-import com.kuzoncby.mix.model.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

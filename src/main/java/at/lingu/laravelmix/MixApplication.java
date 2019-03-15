@@ -1,4 +1,4 @@
-package com.kuzoncby.mix;
+package at.lingu.laravelmix;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,4 +9,5 @@ public class MixApplication {
     public static void main(String[] args) {
         SpringApplication.run(MixApplication.class, args);
     }
+
 }

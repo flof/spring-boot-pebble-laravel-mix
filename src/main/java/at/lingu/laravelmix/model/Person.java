@@ -1,4 +1,4 @@
-package com.kuzoncby.mix.model;
+package at.lingu.laravelmix.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,16 +13,16 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @Entity
-@ApiModel(value = "人员实体", description = "数据库人员实体")
+@ApiModel(value = "Person Entity", description = "H2 database entity")
 public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @ApiModelProperty(notes = "记录主键")
+    @ApiModelProperty(notes = "PK")
     private Long id;
-    @ApiModelProperty(notes = "人员名称")
+    @ApiModelProperty(notes = "Name")
     private String name;
-    @ApiModelProperty(notes = "人员显示名称")
+    @ApiModelProperty(notes = "Display Name")
     private String displayName;
 
 }
